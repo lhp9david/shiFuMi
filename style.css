@@ -103,6 +103,10 @@ p{
     background-color:#3E7194;
     transition: 0.3s;
 }
+
+.myP img {
+    scale:0.8;
+}
 @media (max-width:1400px) {
     .ratio {
         display: none;
