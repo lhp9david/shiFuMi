@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/ai.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Pierre, Feuille, Ciseaux</title>
+</head>
+
+<body>
+    <h1>Pierre, Feuille, Ciseaux</h1>
+<div class="air">
+<div class="ratio">
+    <p>% de victoire: <span id="victoire">0</span></p>
+    <p>% de défaite: <span id="defaite">0</span></p>
+</div>
+    <p class="score userScore">Votre score: <span id=myScore>0</span></p>
+    <div class="espace">
+        <div class="robot"><img src="img/ai.png" alt=""></div>
+
+        <div class="arene">
+            <p class="botP"></p>
+            <p class="myP"></p>
+        </div>
+  
+        <div class="bouton">
+            <button id="pierre" value="pierre">Pierre <img src="img/Pdes-pierres.png" alt=""></button>
+            <button id="feuille" value="feuille">Feuille <img src="img/Pfeuille.png" alt=""></button>
+            <button id="ciseaux" value="ciseaux">Ciseaux <img src="img/Pciseaux.png" alt=""></button>
+        </div>
+    </div>
+    <p class="score botScore">Le score de robot: <span id="scoreBot">0</span></p>
+</div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
