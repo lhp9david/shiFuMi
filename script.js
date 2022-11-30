@@ -44,8 +44,8 @@ pierre.addEventListener('click', () => {
     myP.innerHTML = '<img src="img/des-pierres.png" alt="">';
     document.querySelector('.arene').appendChild(myP);
 
-    ratioVictoire();
-    ratioDefaite();
+    // ratioVictoire();
+    // ratioDefaite();
     victoireDefaite();
 
 });
@@ -80,8 +80,8 @@ feuille.addEventListener('click', () => {
     myP.innerHTML = '<img src="img/feuille.png" alt="">';
     document.querySelector('.arene').appendChild(myP);
 
-    ratioVictoire();
-    ratioDefaite();
+    // ratioVictoire();
+    // ratioDefaite();
     victoireDefaite();
 
 });
@@ -116,14 +116,15 @@ ciseaux.addEventListener('click', () => {
     myP.innerHTML = '<img src="img/ciseaux.png" alt="">';
     document.querySelector('.arene').appendChild(myP);
 
-    ratioVictoire();
-    ratioDefaite();
+    // ratioVictoire();
+    // ratioDefaite();
     victoireDefaite();
 
 
 });
 
 function victoireDefaite() {
+    console.log(myScore)
     if (myScore == 5) {
         document.querySelector('body').classList.add('victoire');
         document.querySelector('.air').classList.add('none');
@@ -156,21 +157,21 @@ function victoireDefaite() {
         })
     }
 }
-function ratioVictoire() {
-    let ratioV = myScore / (myScore + scoreBot) * 100;
-    document.querySelector('#victoire').innerText = `${ratioV.toFixed(1)}%`;
-    if (document.querySelector('#victoire').innerText == 'NaN%') {
-        document.querySelector('#victoire').innerText = 0
-    }
-}
+// function ratioVictoire() {
+//     let ratioV = myScore / (myScore + scoreBot) * 100;
+//     document.querySelector('#victoire').innerText = `${ratioV.toFixed(1)}%`;
+//     if (document.querySelector('#victoire').innerText == 'NaN%') {
+//         document.querySelector('#victoire').innerText = 0
+//     }
+// }
 
-function ratioDefaite() {
-    let ratioD = scoreBot / (myScore + scoreBot) * 100;
-    document.querySelector('#defaite').innerText = `${ratioD.toFixed(1)}%`
-    if (document.querySelector('#defaite').innerText == 'NaN%') {
-        document.querySelector('#defaite').innerText = 0
-    }
-}
+// function ratioDefaite() {
+//     let ratioD = scoreBot / (myScore + scoreBot) * 100;
+//     document.querySelector('#defaite').innerText = `${ratioD.toFixed(1)}%`
+//     if (document.querySelector('#defaite').innerText == 'NaN%') {
+//         document.querySelector('#defaite').innerText = 0
+//     }
+// }
 
 
 
