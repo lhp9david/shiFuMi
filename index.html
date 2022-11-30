@@ -12,29 +12,40 @@
 
 <body>
     <h1>Pierre, Feuille, Ciseaux</h1>
-<div class="air">
-<div class="ratio">
-    <p>% de victoire: <span id="victoire">0</span></p>
-    <p>% de défaite: <span id="defaite">0</span></p>
-</div>
-    <p class="score userScore">Votre score: <span id=myScore>0</span></p>
-    <div class="espace">
-        <div class="robot"><img src="img/ai.png" alt=""></div>
+    <div class="air none">
+        <div class="ratio">
+            <p>Statistique</p>
+            <p>victoire: <span id="victoire">0</span></p>
+            <p>défaite: <span id="defaite">0</span></p>
+        </div>
+        <p class="score userScore">Votre score <span id=myScore>0</span></p>
+        <div class="espace">
+            <div class="robot"><img src="img/ai.png" alt=""></div>
 
-        <div class="arene">
-            <p class="botP"></p>
-            <p class="myP"></p>
+            <div class="arene">
+                <p class="botP"></p>
+                <p class="myP"></p>
+                <p class="regle"></p>
+            </div>
+
+            <div class="bouton">
+                <button id="pierre" value="pierre">Pierre <img src="img/Pdes-pierres.png" alt=""></button>
+                <button id="feuille" value="feuille">Feuille <img src="img/Pfeuille.png" alt=""></button>
+                <button id="ciseaux" value="ciseaux">Ciseaux <img src="img/Pciseaux.png" alt=""></button>
+            </div>
         </div>
-  
-        <div class="bouton">
-            <button id="pierre" value="pierre">Pierre <img src="img/Pdes-pierres.png" alt=""></button>
-            <button id="feuille" value="feuille">Feuille <img src="img/Pfeuille.png" alt=""></button>
-            <button id="ciseaux" value="ciseaux">Ciseaux <img src="img/Pciseaux.png" alt=""></button>
-        </div>
+        <p class="score botScore">Le score de robot: <span id="scoreBot">0</span></p>
     </div>
-    <p class="score botScore">Le score de robot: <span id="scoreBot">0</span></p>
-</div>
 
+    <div class="information">
+        <img src="img/ai.png" alt="">
+        <p class="msgAi">Salut, je m'appelle AI, je suis le champion du monde des robots du <strong>pierre, feuilles,
+                ciseaux</strong> . Voudrais tu essayer de me battre ? Je te propose un match en 5 points. <br>Quel est
+            ton Prénom ?</p>
+        <input id="nom" type="text" maxlength="20" placeholder="Prénom">
+        <button id="valider">valider</button>
+    </div>
+<audio id="audio" src="sons/cmptkey-clavier-d-ordinateur-id-0229-ls_itoFT21W.mp3"></audio>
     <script src="script.js"></script>
 </body>
 

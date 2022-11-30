@@ -1,14 +1,61 @@
 @import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
-body{
+
+body {
     background-color: #91D9F9;
     font-family: 'Nerko One', cursive;
 }
+.information {
+    text-align: center;
+    margin-top: 3em;
+}
+.msgAi {
+    font-size: 2em;
+    width: 50%;
+    margin: 2em auto;
+}
+
 h1 {
     text-align: center;
+}
+.victoire{
+    background-color: green;
+}
+.defaite {
+    background-color: red;
+}
+.none {
+    display: none !important;
+
+}
+.message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    font-size: 1.8em;
+}
+.regle {
+    width: 50%;
+    margin:3em auto;
+    font-size: 1.5em;
+}
+.recommencer {
+    margin: auto;
+    margin: auto;
+    text-align: center;
+    display: block;
+    padding: 1em;
+    background-color: #91D9F9;
+    border-radius: 1em;
+    cursor: pointer;
+    width: 20%;
+    font-family: 'Nerko One', cursive;
+    font-size: 1.2em;
 }
 .air {
     display: flex;
 }
+
 .ratio {
     position: absolute;
     top: 1em;
@@ -21,7 +68,8 @@ h1 {
     background-color: #DBEFFA;
     border: 5px solid #3E7194;
 }
-.score{
+
+.score {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -45,6 +93,7 @@ h1 {
     padding: 1em;
     border: 5px solid #3E7194;
 }
+
 .arene {
     display: flex;
     flex-direction: column;
@@ -54,11 +103,12 @@ h1 {
     margin: auto;
     background-color: #91D9F9;
     border: 5px solid #3E7194;
-    
+
 }
+
 .bouton {
     display: flex;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
 }
 
 .robot {
@@ -66,20 +116,28 @@ h1 {
     justify-content: center;
     justify-self: flex-start;
 }
-p{
+
+p {
     text-align: center;
 }
-.botP,.myP{
+
+.botP {
+    animation: fadein 2s;
+
+}
+
+.myP {
     animation: fadein 2s;
     /* -webkit-animation: fadein 2s; */
 }
 
 @keyframes fadein {
     from {
-        opacity:0;
+        opacity: 0;
     }
+
     to {
-        opacity:1;
+        opacity: 1;
     }
 
 }
@@ -88,57 +146,90 @@ p{
     height: 5px;
     background-color: black;
 }
+
 .bouton button {
-    padding:1em;
+    padding: 1em;
     cursor: pointer;
     background-color: #91D9F9;
     font-weight: bold;
     border-radius: 2em;
     font-size: 1.5em;
     border: 5px solid #3E7194;
-    font-family: 'Nerko One', cursive;;
+    font-family: 'Nerko One', cursive;
+
 }
+
 .bouton button:hover {
     color: white;
-    background-color:#3E7194;
+    background-color: #3E7194;
     transition: 0.3s;
 }
 
 .myP img {
-    scale:0.8;
+    scale: 0.8;
 }
-.botP img{
-scale: 0.8;
+
+.botP img {
+    scale: 0.8;
+}
+#nom{
+    height: 2em;
+    width: 15%;
+    text-align: center;
+}
+#valider {
+  padding: 0.3em;
+  font-family: 'Nerko One', cursive;
+  font-weight: bold;
+  width: 8em;
+  font-size: 1em;
+  cursor: pointer;
 }
 
 @media (max-width:1400px) {
     .ratio {
         display: none;
     }
+    .msgAi {
+        font-size: 1em;
+        width: 80%;
+    }
+
     h1 {
         margin: 0 auto;
     }
 
     .bouton button {
-        padding: 0.1em;
+        padding: 0.2em;
         font-size: 1em;
+        border: 2px solid #3E7194;
     }
+
     .air {
         height: 50%;
     }
+
     .arene {
         border-radius: 0;
         width: auto;
         height: auto;
-        margin: auto;
-        background:none;
+        margin: 0 auto;
+        background: none;
+        border: none;
+
     }
-    .espace{
+
+    .espace {
         width: 100%;
-        height: 75vh;
+        height: 85vh;
+        padding: 0;
+        justify-content: space-between;
+        justify-self: flex-start;
     }
-    img {
-        scale:0.5;
+
+    .robot img {
+        scale: 0.5;
+        margin-top: -25px;
     }
 
     .botScore {
@@ -147,11 +238,43 @@ scale: 0.8;
         width: 3em;
 
     }
+
     .userScore {
         position: absolute;
         display: block;
         font-size: 1em;
         right: 10px;
-       width: 3em;
+        width: 3em;
+    }
+
+    .botP img {
+        height: 100px;
+    }
+
+    .myP img {
+        height: 100px;
+    }
+
+    .bouton {
+        padding: 1em;
+        justify-content: space-between;
+    }
+    .recommencer {
+        width: auto;
+    }
+    #valider {
+        width: auto;
+        font-size: 1em;
+    }
+    #nom{
+        width: auto;
+    }
+    #nom::placeholder{
+        font-family: 'Nerko One', cursive;
+    }
+    .regle {
+        width: auto;
+        margin:0 auto;
+        font-size: 1.2em;
     }
 }
