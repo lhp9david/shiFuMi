@@ -206,9 +206,11 @@ function typewriter() {
     }
 }
 typewriter();
+window.addEventListener('load', ()=>{
+    clavier = new Audio('sons/cmptkey-clavier-d-ordinateur-id-0229-ls_itoFT21W.mp3');
+    clavier.play();
+})
 
-clavier = new Audio('sons/cmptkey-clavier-d-ordinateur-id-0229-ls_itoFT21W.mp3');
-clavier.play();
 
 
 

@@ -123,10 +123,12 @@ p {
 
 .botP {
     animation: fadein 2s;
+    margin: 0;
 
 }
 
 .myP {
+    margin: 0;
     animation: fadein 2s;
     /* -webkit-animation: fadein 2s; */
 }
@@ -166,11 +168,11 @@ p {
 }
 
 .myP img {
-    scale: 0.8;
+    scale: 0.5;
 }
 
 .botP img {
-    scale: 0.8;
+    scale: 0.5;
 }
 #nom{
     height: 2em;
