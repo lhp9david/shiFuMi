@@ -103,6 +103,7 @@ h1 {
     margin: auto;
     background-color: #91D9F9;
     border: 5px solid #3E7194;
+    scale: 0.8;
 
 }
 
@@ -115,6 +116,9 @@ h1 {
     display: flex;
     justify-content: center;
     justify-self: flex-start;
+}
+.robot {
+    scale: 0.8;
 }
 
 p {
@@ -218,6 +222,7 @@ p {
         margin: 0 auto;
         background: none;
         border: none;
+        margin-top: -120px;
 
     }
 
@@ -250,11 +255,11 @@ p {
     }
 
     .botP img {
-        height: 100px;
+        height: 150px;
     }
 
     .myP img {
-        height: 100px;
+        height: 150px;
     }
 
     .bouton {

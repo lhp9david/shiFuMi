@@ -135,6 +135,8 @@ function victoireDefaite() {
         recommencer.classList.add('recommencer')
         document.querySelector('body').appendChild(message);
         document.querySelector('body').appendChild(recommencer)
+        let sonVictoire = new Audio('sons/victoire.mp3')
+        sonVictoire.play();
         recommencer.addEventListener('click', () => {
             location.reload();
         })
