@@ -23,6 +23,11 @@ pierre.addEventListener('click', () => {
     document.querySelector('.regle').classList.add('none')
     document.querySelector('.myP').remove();
     document.querySelector('.botP').remove();
+    document.querySelector('.youWin').classList.remove('block')
+    document.querySelector('.youLose').classList.remove('block')
+    document.querySelector('.youLose').classList.remove('none')
+    document.querySelector('.youWin').classList.remove('none')
+
 
 
     const btn = ['<img src="img/ciseaux.png" alt="">', '<img src="img/des-pierres.png" alt="">', '<img src="img/feuille.png" alt="">'];
@@ -34,8 +39,15 @@ pierre.addEventListener('click', () => {
 
     if (botP.innerHTML == btn[0]) {
         document.querySelector('#myScore').innerText = myScore += 1;
+        document.querySelector('.youLose').classList.add('none')
+        document.querySelector('.youWin').classList.add('block')
     } else if (botP.innerHTML == btn[2]) {
         document.querySelector('#scoreBot').innerText = scoreBot += 1
+        document.querySelector('.youWin').classList.add('none')
+        document.querySelector('.youLose').classList.add('block')
+    } else {
+        document.querySelector('.youWin').classList.add('none')
+        document.querySelector('.youLose').classList.add('none')
     }
 
 
@@ -59,6 +71,10 @@ feuille.addEventListener('click', () => {
     document.querySelector('.regle').classList.add('none')
     document.querySelector('.myP').remove();
     document.querySelector('.botP').remove();
+    document.querySelector('.youWin').classList.remove('block')
+    document.querySelector('.youLose').classList.remove('block')
+    document.querySelector('.youLose').classList.remove('none')
+    document.querySelector('.youWin').classList.remove('none')
 
     const btn = ['<img src="img/ciseaux.png" alt="">', '<img src="img/des-pierres.png" alt="">', '<img src="img/feuille.png" alt="">'];
 
@@ -70,8 +86,15 @@ feuille.addEventListener('click', () => {
 
     if (botP.innerHTML == btn[1]) {
         document.querySelector('#myScore').innerText = myScore += 1
+        document.querySelector('.youLose').classList.add('none')
+        document.querySelector('.youWin').classList.add('block')
     } else if (botP.innerHTML == btn[0]) {
         document.querySelector('#scoreBot').innerText = scoreBot += 1
+        document.querySelector('.youWin').classList.add('none')
+        document.querySelector('.youLose').classList.add('block')
+    } else {
+        document.querySelector('.youWin').classList.add('none')
+        document.querySelector('.youLose').classList.add('none')
     }
 
 
@@ -95,7 +118,10 @@ ciseaux.addEventListener('click', () => {
     document.querySelector('.regle').classList.add('none')
     document.querySelector('.myP').remove();
     document.querySelector('.botP').remove();
-
+    document.querySelector('.youWin').classList.remove('block')
+    document.querySelector('.youLose').classList.remove('block')
+    document.querySelector('.youLose').classList.remove('none')
+    document.querySelector('.youWin').classList.remove('none')
 
     const btn = ['<img src="img/ciseaux.png" alt="">', '<img src="img/des-pierres.png" alt="">', '<img src="img/feuille.png" alt="">'];
     const botP = document.createElement('p');
@@ -107,8 +133,16 @@ ciseaux.addEventListener('click', () => {
 
     if (botP.innerHTML == btn[2]) {
         document.querySelector('#myScore').innerText = myScore += 1
+        document.querySelector('.youLose').classList.add('none')
+        document.querySelector('.youWin').classList.add('block')
+       
     } else if (botP.innerHTML == btn[1]) {
         document.querySelector('#scoreBot').innerText = scoreBot += 1
+        document.querySelector('.youWin').classList.add('none')
+        document.querySelector('.youLose').classList.add('block')
+    } else {
+        document.querySelector('.youWin').classList.add('none')
+        document.querySelector('.youLose').classList.add('none')
     }
 
     const myP = document.createElement('p');

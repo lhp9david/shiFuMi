@@ -25,7 +25,9 @@ h1 {
 }
 .none {
     display: none !important;
-
+}
+.visible{
+    display: block;
 }
 .message {
     display: flex;
@@ -104,7 +106,6 @@ h1 {
     background-color: #91D9F9;
     border: 5px solid #3E7194;
     scale: 0.8;
-
 }
 
 .bouton {
@@ -116,11 +117,19 @@ h1 {
     display: flex;
     justify-content: center;
     justify-self: flex-start;
+    justify-content: space-around;
 }
 .robot {
     scale: 0.8;
 }
-
+.youWin {
+    font-size: 2em;
+    color: green;
+}
+.youLose {
+    font-size: 2em;
+    color: red;
+}
 p {
     text-align: center;
 }
@@ -284,4 +293,15 @@ p {
         margin:0 auto;
         font-size: 1.2em;
     }
+    .youWin{
+        position: absolute;
+        top: 45vh;
+        animation: fadein 3s;
+    }
+    .youLose {
+        position: absolute;
+        top: 45vh;
+        animation: fadein 3s;
+    }
+
 }
