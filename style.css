@@ -1,13 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
-
+html,body {
+    height: 100%;
+}
 body {
     background-color: #91D9F9;
     font-family: 'Nerko One', cursive;
 }
+
 .information {
     text-align: center;
     margin-top: 3em;
 }
+
 .msgAi {
     font-size: 2em;
     width: 50%;
@@ -17,18 +21,23 @@ body {
 h1 {
     text-align: center;
 }
-.victoire{
+
+.victoire {
     background-color: green;
 }
+
 .defaite {
     background-color: red;
 }
+
 .none {
     display: none !important;
 }
-.visible{
+
+.visible {
     display: block;
 }
+
 .message {
     display: flex;
     justify-content: center;
@@ -36,11 +45,13 @@ h1 {
     height: 50vh;
     font-size: 1.8em;
 }
+
 .regle {
     width: 50%;
-    margin:3em auto;
+    margin: 3em auto;
     font-size: 1.5em;
 }
+
 .recommencer {
     margin: auto;
     margin: auto;
@@ -54,8 +65,10 @@ h1 {
     font-family: 'Nerko One', cursive;
     font-size: 1.2em;
 }
+
 .air {
     display: flex;
+    flex-direction: row-reverse;
 }
 
 .ratio {
@@ -82,6 +95,7 @@ h1 {
     background-color: #DBEFFA;
     padding: 1em;
     border: 5px solid #3E7194;
+    animation: gaucheDroite 1s;
 }
 
 .espace {
@@ -119,17 +133,27 @@ h1 {
     justify-self: flex-start;
     justify-content: space-around;
 }
+
 .robot {
     scale: 0.8;
 }
+
 .youWin {
     font-size: 2em;
     color: green;
 }
+
 .youLose {
     font-size: 2em;
     color: red;
 }
+.youDraw {
+    font-size: 2em;
+    color: orange;
+    margin: 0  0 0 44%;
+    padding: 0;
+}
+
 p {
     text-align: center;
 }
@@ -137,7 +161,6 @@ p {
 .botP {
     animation: fadein 2s;
     margin: 0;
-
 }
 
 .myP {
@@ -154,7 +177,19 @@ p {
     to {
         opacity: 1;
     }
+}
 
+.fadein {
+    animation: fadein 2s;
+}
+
+@keyframes gaucheDroite {
+    from {
+        scale: 2;
+    }
+    to {
+        scale: 1;
+    }
 }
 
 .ligne {
@@ -171,7 +206,6 @@ p {
     font-size: 1.5em;
     border: 5px solid #3E7194;
     font-family: 'Nerko One', cursive;
-
 }
 
 .bouton button:hover {
@@ -187,24 +221,30 @@ p {
 .botP img {
     scale: 0.5;
 }
-#nom{
+
+#nom {
     height: 2em;
     width: 15%;
     text-align: center;
 }
+
 #valider {
-  padding: 0.3em;
-  font-family: 'Nerko One', cursive;
-  font-weight: bold;
-  width: 8em;
-  font-size: 1em;
-  cursor: pointer;
+    padding: 0.3em;
+    font-family: 'Nerko One', cursive;
+    font-weight: bold;
+    width: 8em;
+    font-size: 1em;
+    cursor: pointer;
 }
 
+
+
 @media (max-width:1400px) {
+
     .ratio {
         display: none;
     }
+
     .msgAi {
         font-size: 1em;
         width: 80%;
@@ -222,6 +262,7 @@ p {
 
     .air {
         height: 50%;
+        flex-direction: initial;
     }
 
     .arene {
@@ -232,7 +273,6 @@ p {
         background: none;
         border: none;
         margin-top: -120px;
-
     }
 
     .espace {
@@ -252,15 +292,18 @@ p {
         position: absolute;
         font-size: 1em;
         width: 3em;
-
     }
 
     .userScore {
         position: absolute;
-        display: block;
+        display: flex;
         font-size: 1em;
         right: 10px;
         width: 3em;
+    }
+
+    .score {
+        height: 100px;
     }
 
     .botP img {
@@ -275,33 +318,51 @@ p {
         padding: 1em;
         justify-content: space-between;
     }
+
     .recommencer {
         width: auto;
     }
+
     #valider {
         width: auto;
         font-size: 1em;
     }
-    #nom{
+
+    #nom {
         width: auto;
     }
-    #nom::placeholder{
+
+    #nom::placeholder {
         font-family: 'Nerko One', cursive;
     }
+
     .regle {
         width: auto;
-        margin:0 auto;
+        margin: 0 auto;
         font-size: 1.2em;
     }
-    .youWin{
-        position: absolute;
-        top: 45vh;
-        animation: fadein 3s;
-    }
-    .youLose {
+
+    .youWin {
         position: absolute;
         top: 45vh;
         animation: fadein 3s;
     }
 
+    .youLose {
+        position: absolute;
+        top: 45vh;
+        animation: fadein 3s;
+    }
+    .youDraw {
+        position: absolute;
+        top: 45vh;
+        left: 35%;
+        margin:0;
+        width: fit-content;
+        animation: fadein 3s;
+    }
+
+    #myScore,#scoreBot {
+        font-size: 2em;
+    }
 }

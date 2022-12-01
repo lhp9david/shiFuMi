@@ -9,6 +9,7 @@ let prenom = document.querySelector('#nom').value;
 document.querySelector('#valider').addEventListener('click', () => {
     document.querySelector('.information').style.display = 'none';
     document.querySelector('.air').classList.remove('none');
+    document.querySelector('.air').classList.add('fadein');
     let prenom = document.querySelector('#nom');
     let regle = document.querySelector('.regle');
     regle.innerText = `Bienvenue dans l'arène ${prenom.value}, pour jouer il te suffit de cliquer sur les boutons en bas. `
@@ -16,7 +17,6 @@ document.querySelector('#valider').addEventListener('click', () => {
 })
 
 pierre.addEventListener('click', () => {
-
 
     let audioPierre = new Audio('sons/WEAPSwrd_Serpette raclee sur une pierre 3 (ID 0330)_LS.mp3');
     audioPierre.play();
@@ -27,8 +27,7 @@ pierre.addEventListener('click', () => {
     document.querySelector('.youLose').classList.remove('block')
     document.querySelector('.youLose').classList.remove('none')
     document.querySelector('.youWin').classList.remove('none')
-
-
+    document.querySelector('.youDraw').classList.remove('none')
 
     const btn = ['<img src="img/ciseaux.png" alt="">', '<img src="img/des-pierres.png" alt="">', '<img src="img/feuille.png" alt="">'];
     const botP = document.createElement('p');
@@ -36,20 +35,21 @@ pierre.addEventListener('click', () => {
     botP.innerHTML = `${btn[Math.floor(Math.random() * (3 - 0) + 0)]}`
     document.querySelector('.arene').appendChild(botP);
 
-
     if (botP.innerHTML == btn[0]) {
         document.querySelector('#myScore').innerText = myScore += 1;
         document.querySelector('.youLose').classList.add('none')
         document.querySelector('.youWin').classList.add('block')
+        document.querySelector('.youDraw').classList.add('none')
     } else if (botP.innerHTML == btn[2]) {
         document.querySelector('#scoreBot').innerText = scoreBot += 1
         document.querySelector('.youWin').classList.add('none')
         document.querySelector('.youLose').classList.add('block')
+        document.querySelector('.youDraw').classList.add('none')
     } else {
         document.querySelector('.youWin').classList.add('none')
         document.querySelector('.youLose').classList.add('none')
+        document.querySelector('.youDraw').classList.add('block')
     }
-
 
     const myP = document.createElement('p');
     myP.classList.add('myP')
@@ -59,12 +59,10 @@ pierre.addEventListener('click', () => {
     // ratioVictoire();
     // ratioDefaite();
     victoireDefaite();
-
 });
 
 
 feuille.addEventListener('click', () => {
-
 
     let audioFeuille = new Audio('sons/PAPRHndl_Page qui tourne (ID 0164)_LS.mp3')
     audioFeuille.play();
@@ -75,28 +73,29 @@ feuille.addEventListener('click', () => {
     document.querySelector('.youLose').classList.remove('block')
     document.querySelector('.youLose').classList.remove('none')
     document.querySelector('.youWin').classList.remove('none')
+    document.querySelector('.youDraw').classList.remove('none')
 
     const btn = ['<img src="img/ciseaux.png" alt="">', '<img src="img/des-pierres.png" alt="">', '<img src="img/feuille.png" alt="">'];
-
     const botP = document.createElement('p');
     botP.classList.add('botP');
     botP.innerHTML = `${btn[Math.floor(Math.random() * (3 - 0) + 0)]}`
     document.querySelector('.arene').appendChild(botP);
 
-
     if (botP.innerHTML == btn[1]) {
         document.querySelector('#myScore').innerText = myScore += 1
         document.querySelector('.youLose').classList.add('none')
         document.querySelector('.youWin').classList.add('block')
+        document.querySelector('.youDraw').classList.add('none')
     } else if (botP.innerHTML == btn[0]) {
         document.querySelector('#scoreBot').innerText = scoreBot += 1
         document.querySelector('.youWin').classList.add('none')
         document.querySelector('.youLose').classList.add('block')
+        document.querySelector('.youDraw').classList.add('none')
     } else {
         document.querySelector('.youWin').classList.add('none')
         document.querySelector('.youLose').classList.add('none')
+        document.querySelector('.youDraw').classList.add('block')
     }
-
 
     const myP = document.createElement('p');
     myP.classList.add('myP')
@@ -106,12 +105,10 @@ feuille.addEventListener('click', () => {
     // ratioVictoire();
     // ratioDefaite();
     victoireDefaite();
-
 });
 
 
 ciseaux.addEventListener('click', () => {
-
 
     let audioCiseaux = new Audio('sons/SWSH_Epee qui fend l air (ID 0128)_LS.mp3')
     audioCiseaux.play();
@@ -122,6 +119,8 @@ ciseaux.addEventListener('click', () => {
     document.querySelector('.youLose').classList.remove('block')
     document.querySelector('.youLose').classList.remove('none')
     document.querySelector('.youWin').classList.remove('none')
+    document.querySelector('.youDraw').classList.remove('none')
+
 
     const btn = ['<img src="img/ciseaux.png" alt="">', '<img src="img/des-pierres.png" alt="">', '<img src="img/feuille.png" alt="">'];
     const botP = document.createElement('p');
@@ -135,14 +134,17 @@ ciseaux.addEventListener('click', () => {
         document.querySelector('#myScore').innerText = myScore += 1
         document.querySelector('.youLose').classList.add('none')
         document.querySelector('.youWin').classList.add('block')
+        document.querySelector('.youDraw').classList.add('none')
        
     } else if (botP.innerHTML == btn[1]) {
         document.querySelector('#scoreBot').innerText = scoreBot += 1
         document.querySelector('.youWin').classList.add('none')
         document.querySelector('.youLose').classList.add('block')
+        document.querySelector('.youDraw').classList.add('none')
     } else {
         document.querySelector('.youWin').classList.add('none')
         document.querySelector('.youLose').classList.add('none')
+        document.querySelector('.youDraw').classList.add('block')
     }
 
     const myP = document.createElement('p');
@@ -153,8 +155,6 @@ ciseaux.addEventListener('click', () => {
     // ratioVictoire();
     // ratioDefaite();
     victoireDefaite();
-
-
 });
 
 function victoireDefaite() {
@@ -207,9 +207,6 @@ function victoireDefaite() {
 //     }
 // }
 
-
-
-
 // set up text to print, each item in array is new line
 var aText = new Array(
     "Salut, je m'appelle AI, je suis le champion du monde des robots du pierre, feuilles, ciseaux Voudrais tu essayer de me battre ? Je te propose un match en 5 points. Quel est ton Prénom ?",);
@@ -242,6 +239,7 @@ function typewriter() {
         setTimeout("typewriter()", iSpeed);
     }
 }
+
 typewriter();
 window.addEventListener('load', ()=>{
     clavier = new Audio('sons/cmptkey-clavier-d-ordinateur-id-0229-ls_itoFT21W.mp3');
