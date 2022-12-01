@@ -209,7 +209,8 @@ function victoireDefaite() {
 
 // set up text to print, each item in array is new line
 var aText = new Array(
-    "Salut, je m'appelle AI, je suis le champion du monde des robots du pierre, feuilles, ciseaux Voudrais tu essayer de me battre ? Je te propose un match en 5 points. Quel est ton Prénom ?",);
+    "Salut, je m'appelle AI, je suis le champion du monde des robots du pierre, feuilles, ciseaux.",
+    " Voudrais tu essayer de me battre ? Je te propose un match en 5 points. Quel est ton Prénom ?",);
 var iSpeed = 80; // time delay of print out
 var iIndex = 0; // start printing array at this posision
 var iArrLength = aText[0].length; // the length of the text array
