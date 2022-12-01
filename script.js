@@ -10,6 +10,7 @@ document.querySelector('#valider').addEventListener('click', () => {
     document.querySelector('.information').style.display = 'none';
     document.querySelector('.air').classList.remove('none');
     document.querySelector('.air').classList.add('fadein');
+
     let prenom = document.querySelector('#nom');
     let regle = document.querySelector('.regle');
     regle.innerText = `Bienvenue dans l'arène ${prenom.value}, pour jouer il te suffit de cliquer sur les boutons en bas. `

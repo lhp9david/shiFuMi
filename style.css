@@ -382,4 +382,7 @@ p {
     .bulle,.code {
         display: none;
     }
+    body{
+        overflow-y: auto
+    };
 }
