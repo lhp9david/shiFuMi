@@ -156,15 +156,18 @@ h1 {
 .youWin {
     font-size: 2em;
     color: green;
+    width: 145px;
 }
 
 .youLose {
     font-size: 2em;
     color: red;
+    width: 145px;
 }
 .youDraw {
     font-size: 2em;
     color: orange;
+    width: 145px;
 }
 
 p {
@@ -370,9 +373,6 @@ p {
     .youDraw {
         position: absolute;
         top: 45vh;
-        left: 35%;
-        margin:0;
-        width: fit-content;
         animation: fadein 3s;
     }
 
