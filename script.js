@@ -17,6 +17,8 @@ document.querySelector('#valider').addEventListener('click', () => {
     clavier.pause();
 })
 
+// logique si je joue pierre
+
 pierre.addEventListener('click', () => {
 
     let audioPierre = new Audio('sons/WEAPSwrd_Serpette raclee sur une pierre 3 (ID 0330)_LS.mp3');
@@ -62,6 +64,7 @@ pierre.addEventListener('click', () => {
     victoireDefaite();
 });
 
+// logique si je joue feuille
 
 feuille.addEventListener('click', () => {
 
@@ -108,6 +111,7 @@ feuille.addEventListener('click', () => {
     victoireDefaite();
 });
 
+ // logique si je joue ciseaux
 
 ciseaux.addEventListener('click', () => {
 
@@ -158,6 +162,7 @@ ciseaux.addEventListener('click', () => {
     victoireDefaite();
 });
 
+
 function victoireDefaite() {
     console.log(myScore)
     if (myScore == 5) {
@@ -192,34 +197,20 @@ function victoireDefaite() {
         })
     }
 }
-// function ratioVictoire() {
-//     let ratioV = myScore / (myScore + scoreBot) * 100;
-//     document.querySelector('#victoire').innerText = `${ratioV.toFixed(1)}%`;
-//     if (document.querySelector('#victoire').innerText == 'NaN%') {
-//         document.querySelector('#victoire').innerText = 0
-//     }
-// }
 
-// function ratioDefaite() {
-//     let ratioD = scoreBot / (myScore + scoreBot) * 100;
-//     document.querySelector('#defaite').innerText = `${ratioD.toFixed(1)}%`
-//     if (document.querySelector('#defaite').innerText == 'NaN%') {
-//         document.querySelector('#defaite').innerText = 0
-//     }
-// }
 
-// set up text to print, each item in array is new line
+// configure le texte à afficher, le délai et l'index pour commencer le texte à 0
 var aText = new Array(
     "Salut, je m'appelle AI, je suis le champion du monde des robots du pierre, feuilles, ciseaux.",
     " Voudrais tu essayer de me battre ? Je te propose un match en 5 points. Quel est ton Prénom ?",);
-var iSpeed = 80; // time delay of print out
-var iIndex = 0; // start printing array at this posision
-var iArrLength = aText[0].length; // the length of the text array
-var iScrollAt = 20; // start scrolling up at this many lines
+var iSpeed = 80; // le délai entre chaque lettre (en milliseconde)
+var iIndex = 0; // demarrer le texte à l'index 0
+var iArrLength = aText[0].length; // la longueur du texte
+var iScrollAt = 20; //défilement de la fenêtre quand le texte atteint cette ligne
 
-var iTextPos = 0; // initialise text position
-var sContents = ''; // initialise contents variable
-var iRow; // initialise current row
+var iTextPos = 0; // initialise la position du texte
+var sContents = ''; // initialise le contenu de la variable
+var iRow; // initialise la variable de la ligne
 
 function typewriter() {
     sContents = ' ';
@@ -242,6 +233,7 @@ function typewriter() {
     }
 }
 
+// execute la fonction typewriter au chargement de la page
 typewriter();
 window.addEventListener('load', ()=>{
     clavier = new Audio('sons/cmptkey-clavier-d-ordinateur-id-0229-ls_itoFT21W.mp3');
